@@ -1,42 +1,194 @@
-# Hello World with React boilerplate
+# INSTRUCCIONES PARA LA CLASE
 
-Start coding a react application
+Se trata de programar una app de generación de contraseñas desde cero, a lo largo de una clase.
 
-> If you are working locally instead of using codespaces or gitpod, please follow [local installation steps].(#local-installation) and come back to this part of the readme.
+Los alumnos se separarán en grupos de dos o tres. Ambos trabajarán sobre el mismo repo, turnándose:
+- Uno de ellos comparte pantalla y escribe código.
+- El otro apoya y comparte ideas, busca recursos o documentación...
 
-## How to start coding?
+El proceso de creación de la app se divide en pasos. Los alumnos tienen un período de 5 - 10 minutos para resolver cada parte. Cada paso tiene un reto extra, por si el equipo termina antes de tiempo y quiere practicar conceptos más avanzados.
 
-- Install the packages with `$ npm install`.
-- Run the webpack server with `$ npm run start`
+## PASOS A SEGUIR
 
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
+### 1. Analizar la aplicación todos juntos para elaborar una estrategia de resolución
 
-## Local Installation (skip if you are working on codespaces or gitpod)
+> **Conceptos trabajados** Workflow
 
-Download the boilerplate using git
+> **Tiempo máximo** 5 minutos
 
-```
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
-```
+Esta parte la hace toda la clase junta. El objetivo es analizar los pasos que tendremos que dar para completar la aplicación. Deberíamos discutir diferentes tipos de estrategias y ver pros y contras.
 
-## Publish your website!
+Si aparece alguna propuesta significativamente mejor que los pasos planteados en esta guía, debemos adaptarnos a ella.
 
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
+Antes de pasar a equipos, que se abran los repos e instalen react y react-bootstrap y hacer en público el paso 1 para que sepan cómo utilizar la librería react-bootstrap. Avisar que pueden utilizar tanto bootstrap como CSS como react-bootstrap
 
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
+```` bash
+npx create-react-app .
+````
 
-## Other features
+```` bash
+npm install react-bootstrap bootstrap
+````
 
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-- Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
-- One-command publish of the code to github pages with `npm run deploy:github`.
-- Babel 7 (really fast).
+### 2. Crear un componente Navbar
 
-### Contributors
+> **Conceptos trabajados** Components
 
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/react-hello/graphs/contributors).
+> **Tiempo máximo** 10 minutos
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+> **Retos adicionales** Que los links del Navbar se rendericen mediante un .map, ejecutado sobre un array importado desde un archivo externo.
+
+Los estudiantes deben crear un Navbar para toda su aplicación que contenga:
+- Un título
+- Un enlace a home
+- Otro enlace a las contraseñas guardadas
+No es necesario que estos enlaces funcionen todavía
+
+### 3. Crear un componente Hero
+
+> **Conceptos trabajados** Components
+
+> **Tiempo máximo** 10 minutos
+
+> **Retos adicionales** Que el background tenga una imagen
+
+Los estudiantes deben crear un Hero para su página principal que contenga:
+- Un título
+- Una descripción de la aplicación
+- Un color de fondo
+
+### 4. Crear un componente Checkbox
+
+> **Conceptos trabajados** Components, controlled inputs, props
+
+> **Tiempo máximo** 15 minutos
+
+> **Retos adicionales** Que las props lleguen con un valor por defecto. Añadir PropTypes
+
+Los estudiantes deben crear un Checkbox que contenga:
+- Un estado para controlar si está o no checkeado
+- Un handler para gestionar el click del usuario
+- Una prop label con el texto a mostrar
+- Una prop initiallyChecked con el estado inicial
+
+### 5. Crear un componente Options
+
+> **Conceptos trabajados** Components, props
+
+> **Tiempo máximo** 15 minutos
+
+> **Retos adicionales** Crear también un componente Slider, que acepte valores entre 8 y 18
+
+Los estudiantes deben crear un componente Options que contenga:
+- Un título (por ejemplo, "Selecciona tus opciones")
+- Un Checkbox con el label "Incluir mayúsculas"
+- Un Checkbox con el label "Incluir números"
+- Un Checkbox con el label "Incluir símbolos"
+- Un título tipo "Esta es tu contraseña"
+- Un placeholder para la contraseña. Por ejemplo, un p u otro h con el texto "Contraseña"
+- Los estudiantes pueden prepararse estados para controlar si cada uno de los checkbox está o no marcado
+
+### 6. Crear un componente Main
+
+> **Conceptos trabajados** Components
+
+> **Tiempo máximo** 10 minutos
+
+> **Retos adicionales** Crear también un componente Slider, que acepte valores entre 8 y 18, si todavía no se ha hecho. En caso contrario, que dediquen un tiempo a los estilos
+
+Los estudiantes deben crear un componente (vista) Main que contenga:
+- Hero
+- Options
+
+### 7. Crear un componente ListItem
+
+> **Conceptos trabajados** Components, children
+
+> **Tiempo máximo** 10 minutos
+
+> **Retos adicionales** Que el contenido no provenga de una prop text, sino de children. Revisar estilos
+
+Los estudiantes deben crear un componente ListItem que:
+- utilice la clase list-group-item de bootstrap
+- reciba una prop text para pintar su contenido
+
+### 8. Crear un componente List
+
+> **Conceptos trabajados** Components, children
+
+> **Tiempo máximo** 10 minutos
+
+> **Retos adicionales** Revisar estilos
+
+Los estudiantes deben crear un componente List que:
+- utilice la clase list-group de bootstrap
+- utilice la prop children para pintar su contenido
+
+### 9. Crear un componente MyPasswords
+
+> **Conceptos trabajados** Components
+
+> **Tiempo máximo** 15 minutos
+
+> **Retos adicionales** 
+
+Los estudiantes deben crear un componente (vista) MyPasswords que contenga:
+- Hero
+- List
+- ListItems
+- Un título (por ejemplo, "contraseñas guardadas")
+**IMPORTANTE:** Si todavía no lo han hecho, deberían configurar el Hero para que reciba su título y subtítulo mediante props, para hacerlo reutilizable
+
+### 10. Generar rutas
+
+> **Conceptos trabajados** Routing
+
+> **Tiempo máximo** 15 minutos
+
+> **Retos adicionales** 
+
+Los estudiantes deben crear el sistema de enrutado de la aplicación:
+- Instalar react-router-dom
+- Crear la estructura BrowserRouter > Routes > Route
+- Asociar Main a /
+- Asociar MyPasswords a /my-passwords
+- Actualizar Navbar para que el usuario pueda navegar
+
+### 11. Lógica de generación de contraseñas
+
+> **Conceptos trabajados** JS, eventos
+
+> **Tiempo máximo** 20 minutos
+
+> **Retos adicionales** 
+
+Los estudiantes deben conectar la lógica de generación de contraseñas. Les
+proporcionaremos una función que reciba los parámetros (bool) majus, numbers y symbols y deben conectarla con su interfaz para generar la contraseña:
+- Necesitarán un estado en Options que guarde la contaseña
+- Necesitarán un botón en Options que llame a la función de generar contraseña, leyendo las opciones marcadas
+- Necesitarán que el título "esta es tu contraseña" y la propia contraseña se muestren dinámicamente
+
+### 12. Crear y conectar contexto
+
+> **Conceptos trabajados** React context
+
+> **Tiempo máximo** 20 minutos
+
+> **Retos adicionales** 
+
+Los estudiantes deben crear un contexto para su aplicación y almacenar en su store todos los estados y en sus actions todas sus acciones
+
+### 13. Crear función de guardar contraseñas
+
+> **Conceptos trabajados** React context
+
+> **Tiempo máximo** 20 minutos
+
+> **Retos adicionales** 
+
+Los estudiantes deben crear una funcionalidad para guardar contraseñas. Para ello necesitarán:
+1. Un nuevo estado en su context para exponer la lista de contraseñas guardadas
+2. Una nueva función que:
+    1. guarde la nueva contraseña en el estado de listado de contraseñas
+    2. resetee la contraseña generada y los checkboxes
+    3. lleve al usuario a /my-passwords
