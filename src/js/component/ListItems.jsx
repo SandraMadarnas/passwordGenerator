@@ -1,6 +1,6 @@
 import React from "react";
 
-const ListItem = ({children})=>{
+const ListItems = ({children})=>{
 
     return (
         children.map((element)=>{
@@ -14,4 +14,4 @@ const ListItem = ({children})=>{
     )
 }
 
-export default ListItem;
+export default ListItems;

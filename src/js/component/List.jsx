@@ -1,12 +1,14 @@
 import React from "react";
-import ListItem from "./ListItem";
+import ListItems from "./ListItems.jsx";
 
 const List = ()=>{
 
     return (
+        <>
         <ul class="list-group">
             {children}
         </ul>
+        </>
     )
 }
 

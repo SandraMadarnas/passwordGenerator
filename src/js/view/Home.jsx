@@ -9,8 +9,8 @@ import CheckBox from "../component/CheckBox.jsx";
 const Home = () => {
 	return (
 		<>
-			<NavBar />
-			<Hero />
+			<Hero mainTitle={"Generador de Contraseñas"}
+				secondaryTitle={"¡Genera tus contraseñas seguras en cuestión de segundos!"} />
 			<Options />
 		</>
 	);

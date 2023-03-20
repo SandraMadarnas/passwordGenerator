@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -10,8 +11,8 @@ function NavBar() {
             <Container>
                 <Navbar.Brand href="#home">Generador de Contraseñas</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Contraseñas</Nav.Link>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/my-passwords">Contraseñas</NavLink>
                 </Nav>
             </Container>
         </Navbar>
