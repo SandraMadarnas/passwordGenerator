@@ -7,7 +7,7 @@ import Slider from "./Slider.jsx";
 const Options = () => {
 
     const [passCapitals, setPassCapitals] = useState(true); //callback props
-    const [passNumbers, setPassNumbers] = useState(false);
+    const [passNumbers, setPassNumbers] = useState(true);
     const [passSymbols, setPassSymbols] = useState(false);
 
     return (<>
@@ -17,8 +17,6 @@ const Options = () => {
             <CheckBox label="Incluir Números" handler={setPassNumbers} checkedState={passNumbers} />
             <CheckBox label="Incluir Símbolos" handler={setPassSymbols} checkedState={passSymbols} />
 
-            
-
             <button type="button" className="btn btn-primary m-3">Generar Contraseña</button>
 
             <h3>Esta es tu contraseña</h3>
@@ -27,5 +25,6 @@ const Options = () => {
     </>
     );
 }
+
 
 export default Options;
